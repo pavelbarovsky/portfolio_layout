@@ -1,7 +1,24 @@
+* {  /* селектор для всех элементов страницы*/
+    box-sizing: border-box; /*все элементы будут определенной указанной ширины всегда*/
+}
+
 body {
     margin: 0; /*обнуляем отступы*/
     font-family: 'Montserrat', sans-serif; /*шрифт на весь контент*/
 }
+
+.container {
+    max-width: 1110px;
+    /*background-color: darkgray;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.none {  /* временно скрываем шапку */
+    display: none !important;
+}
+
+/* HEADER */
 
 .header {
     position: relative;
@@ -30,7 +47,7 @@ body {
 }
 
 .header-sybtitle {
-    margin: 0;
+    margin: 0; /*внешний отступ со всех сторон*/
     font-weight: bold;
     font-size: 16px;
     line-height: 150%;
@@ -47,4 +64,63 @@ body {
     bottom: 30px;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+/*PORTFOLIO*/
+.portfolio {
+    /*background-color: slategray;*/
+    padding-top: 80p; /* верхний отступ до хедера*/
+    padding-bottom: 115px; /* нижний отступ до подвала*/
+}
+
+.portfolio-header {
+    margin-bottom: 70px;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 130%;
+    text-align: center;
+    color: #000000;
+}
+
+.porfolio-cards-wrapper { /*правильное размещение карточек (флексбокс)*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*выравнивание элементов по X, по краям контейнера*/
+}
+
+.card {
+    margin-bottom: 30px; /*наружний нижний отступ карточек*/
+    background-color: #FFFFFF;
+    max-width: 540px;
+    padding: 20px; /*внутренний отступ со всех сторон*/
+    box-sizing: border-box; /*ширина для блока включая контент, паддинги, рамки*/
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35); /*тень карточек*/
+}
+
+.card:last-child {  /*псевдоселектор (выбираем последний элемент класса, последняя карточка)*/
+    margin-bottom: 0; /*убрали отступ под карточкой*/
+}
+
+.card:nth-last-child(2) {  /*псевдоселектор (выбираем элемент класса по номеру с конца, предпоследняя карточка)*/
+    margin-bottom: 0; /*убрали отступ под карточкой*/
+}
+
+.card-img {
+    margin-bottom: 20px;
+}
+
+.card-title {
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: #000000;
+}
+
+.card p { /*все теги p с классов card*/
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    margin: 0;
 }
