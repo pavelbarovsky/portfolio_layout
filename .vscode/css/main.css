@@ -124,3 +124,61 @@ body {
     color: #000000;
     margin: 0;
 }
+
+/* footer */
+
+.footer {
+    background-color: rgb(66, 49, 55);
+    padding-top: 45px;
+    padding-bottom: 130px; 
+    color: #FFFFFF;
+}
+
+.footer-row {  /*выравнивание контента в ряд*/
+    display: flex;  
+    flex-direction: row; /*в ряд*/
+    justify-content: space-between; /*выравнивание внутри ряда по Х*/
+}
+
+.footer-col {  /*для контактов, кнопок и иконок общее свойство*/
+    max-width: 350px;
+    flex-grow: 1; /* делает пространство каждого блока до 350px*/
+}
+
+.footer-copyright {
+    color: rgb(167, 139, 148);
+    line-height: 1.3;
+    flex-grow: 1; /* делает пространство каждого блока до 350px*/
+}
+
+.footer-copyright-name {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 130%;
+    margin-bottom: 15px;
+    align-items: center; /*выравнивание по центру*/
+}
+
+.footer-copyright p {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 15px;
+    align-items: center; /*выравнивание по центру*/
+}
+
+.footer-icons p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.footer-icons-row {
+    display: flex; /*выравнивание иконок в ряд*/
+    align-items: center; /*выравнивание по центру*/
+}
+
+.footer-icons-row > * + * {  /*селектор выбирает теги на первом уровне вложенности внутри этого класса (ссылки)*/
+    margin-left: 30px;       /*плюс звездочка - выбираем соседа от выбранной ссылки*/
+}                            /* первая ссылка не будет выбрана, поэтому нет отступа слева*/
+
