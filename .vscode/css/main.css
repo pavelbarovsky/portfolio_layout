@@ -2,6 +2,10 @@
     box-sizing: border-box; /*все элементы будут определенной указанной ширины всегда*/
 }
 
+html {  /* плавная прокрутка страницы*/
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0; /*обнуляем отступы*/
     font-family: 'Montserrat', sans-serif; /*шрифт на весь контент*/
@@ -30,8 +34,8 @@ body {
     width: 100%; /*ширина*/
     height: 100vh; /*высота без учета контента*/
 
-    background-color: dimgray;
-    background-image: url("./../img/header/header-bg.jpg"); /*из тек.дир/на уровень выше/хедер/файл*/
+    /*background-color: dimgray;*/
+    /*background-image: url("./../img/header/header-bg.jpg"); /*из тек.дир/на уровень выше/хедер/файл*/
     background-size: cover; /*полное заполнение сайта фотографией*/
     background-position: center;
 }
